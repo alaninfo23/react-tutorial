@@ -17,12 +17,16 @@ handleChange = (event) => {
     })
   }
 
-  
+  submitForm = () => {
+    this.props.handleSubmit(this.state)
+    this.setState(this.initialState)
+  }
+
   render() {
     const { name, job } = this.state;
   
     return (
-      <form>
+      <form on>
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -37,6 +41,9 @@ handleChange = (event) => {
           id="job"
           value={job}
           onChange={this.handleChange} />
+          <input type="button" 
+          value="Submit" 
+          onClick={this.submitForm} />
       </form>
     );
   }

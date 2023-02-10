@@ -40,14 +40,22 @@ class App extends Component {
       }),
     })
   }
+
+  handleSubmit = (character) => {
+    this.setState({ characters: [...this.state.characters, character] })
+  }
+
 /* Aqui é onde renderiza tudo né? ele retorna uma div com a tabela, dados e botão remover? */
   render() {
     const { characters } = this.state
   
     return (
       <div className="container">
-        <Table characterData={characters} removeCharacter={this.removeCharacter} />
-        <Form />
+        <Table characterData={characters} 
+        removeCharacter={this.removeCharacter}
+         />
+        <h3>Add New</h3>
+        <Form handleSubmit={this.handleSubmit} />
       </div>
     )
   }
