@@ -2,7 +2,8 @@
 import React, { Component } from "react"
 /* Importando o componente Table */
 import Table from './Table';
-
+/* Importando o componente Form */
+import Form from './Form'
 /* Criando uma classe App extendida da Biblioteca 'Component' do React ?*/
 class App extends Component {
   state = {
@@ -46,6 +47,7 @@ class App extends Component {
     return (
       <div className="container">
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
+        <Form />
       </div>
     )
   }
