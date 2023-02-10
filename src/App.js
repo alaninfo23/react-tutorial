@@ -1,6 +1,9 @@
+/* Importando o componente React ## não entendi? */
 import React, { Component } from "react"
+/* Importando o componente Table */
 import Table from './Table';
 
+/* Criando uma classe App extendida da Biblioteca 'Component' do React ?*/
 class App extends Component {
   state = {
      characters: [
@@ -23,6 +26,10 @@ class App extends Component {
      ]
   };
 
+  /* Função que remove uma linha, não entendi como funciona =(
+     o pouco que entendi foi que ele pegou o estado e armazenou na const charaters?
+     depois fez uma verificação mas não entendi como é..
+  ) */
   removeCharacter = (index) => {
     const { characters } = this.state
     
@@ -32,7 +39,7 @@ class App extends Component {
       }),
     })
   }
-
+/* Aqui é onde renderiza tudo né? ele retorna uma div com a tabela, dados e botão remover? */
   render() {
     const { characters } = this.state
   
